@@ -21,9 +21,13 @@ public class Lesson2Task033 {
                 statusWin = true;
                 break;
             } else if (numberOne > randomNum) {
-                System.out.println("Меньше. У вас осталось " + (limit - count) + " попыток.");
+                if ((limit - count) > 0) {
+                    System.out.println("Меньше. У вас осталось " + (limit - count) + " попыток.");
+                }
             } else if (numberOne < randomNum) {
-                System.out.println("Больше. У вас осталось " + (limit - count) + " попыток.");
+                if ((limit - count) > 0) {
+                    System.out.println("Больше. У вас осталось " + (limit - count) + " попыток.");
+                }
             }
         }
         if (!statusWin) {
@@ -32,3 +36,4 @@ public class Lesson2Task033 {
         sc.close();
     }
 }
+
