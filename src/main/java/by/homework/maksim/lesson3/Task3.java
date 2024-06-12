@@ -4,14 +4,17 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task3 {
-
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
-        arrayRevers(numbers);
+        int[] reversed = reverseArray(numbers);
+        System.out.println("Перевернутый массив: " + Arrays.toString(reversed));
     }
-    public static void arrayRevers(int[] numbers) {
-        for (int i = numbers.length - 1; i >= 0; i--) {
-            System.out.println("Перевернутый массив: " + numbers[i]);
-        }
+
+    public static int[] reverseArray(int[] numbers) {
+        for (int i = numbers.length - 1; i >= 0; i--) ;
+
+        return numbers;
     }
 }
+
+
