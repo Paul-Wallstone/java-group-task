@@ -9,9 +9,9 @@ public class Task2 {
 
     public static int sumOfArray(int[] numbers) {
         int sumArray = 0;
-        for (int i = 0; i < numbers.length; i++)
-            sumArray += numbers[i];
-
+        for (int num : numbers) {
+            sumArray += num;
+        }
         return sumArray;
     }
 

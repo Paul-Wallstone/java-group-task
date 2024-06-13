@@ -5,16 +5,14 @@ public class Task4 {
             int[] numbers = {1, 2, 3, 4, 5};
             int target = 3;
             {
-                System.out.println("Индекс числа " + target + ": " + findIndex(numbers, target));
+  //              System.out.println("Индекс числа " + target + ": " + findIndex(numbers, target));
             }
 
-            public static int findIndex ( int[] arr, int target){
-                for (int i = 0; i < arr.length; i++) {
-                    if (arr[i] == target) {
-                        return i;
+  //          public static int findIndex ( int[] arr, int target){
+   //             for (int i = 0; i < arr.length; i++) {
+    //                if (arr[i] == target) {
+   //                     return i;
                     }
-                }
-                return -1;
+  //              return -1;
             }
-        }
-    }
+
