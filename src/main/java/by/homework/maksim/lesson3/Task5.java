@@ -7,19 +7,18 @@ public class Task5 {
                 {4, 5, 6},
                 {7, 8, 9}
         };
-        int[] sums = sumRows(matrix);
-        System.out.println("Сумма всех строк: " + sums[0]);
+        int sum = sumRows(matrix);
+        System.out.println("Сумма всех строк: " + sum);
     }
 
-    public static int[] sumRows(int[][] numbers) {
-        int[] sums = new int[numbers.length];
+    public static int sumRows(int[][] numbers) {
+        int sum = 0;
         for (int i = 0; i < numbers.length; i++) {
-            int sum = 0;
             for (int j = 0; j < numbers[i].length; j++) {
                 sum += numbers[i][j];
             }
-            sums[i] = sum;
         }
-        return sums;
+        return sum;
     }
+
 }
