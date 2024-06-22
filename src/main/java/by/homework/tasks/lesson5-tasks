@@ -1,0 +1,84 @@
+Задание 1: Класс Pilot
+Создайте класс Pilot, который будет содержать поля и методы для работы с пилотом.
+
+Требования:
+
+Создайте класс Pilot с полями:
+name (тип String)
+weight (тип double)
+experience (тип int)
+Реализуйте конструктор для инициализации полей.
+Создайте геттеры для всех полей.
+Переопределите метод toString
+
+
+Задание 2: Класс Car
+Создайте класс Car, который будет содержать поля и методы для работы с болидом.
+
+Требования:
+
+Создайте класс Car с полями:
+name (тип String)
+power (тип double)
+maxPilotWeight (тип double)
+pilot (тип Pilot)
+Реализуйте конструктор для инициализации полей.
+Создайте метод boolean isPilotSuitable(Pilot pilot), который проверяет, подходит ли пилот по весу.
+Создайте метод void drive(Pilot pilot), который выводит на экран информацию о поездке. Если вес пилота превышает максимальный на 10%,
+снижайте мощность на 20% за каждыйе 10% превышения. Максимально можно привысить на 30%.  Свыше 30% мощность = 0.
+Создайте геттеры для всех полей.
+Переопределите метод toString
+
+
+Задание 3: Класс RaceTrack
+Создайте класс RaceTrack, который будет содержать поля и методы для работы с гоночной трассой.
+
+Требования:
+
+Создайте класс RaceTrack с полями:
+maxCarPower (тип double)
+minCarPower (тип double)
+allowedCars (тип Car[])
+Реализуйте конструктор для инициализации поля maxCarPower и minCarPower.
+minCarPower олжно быть больше 0
+maxCarPower меньше 1000
+Создайте метод boolean canCarRace(Car car), который проверяет, может ли машина проехать по трассе.
+Создайте метод boolean addCar(Car car), который добавляет машину с пилотом в список, если они соответствуют требованиям (мощность машины).
+Создайте метод boolean removeCar(Car car), который убирает машину из списка.
+Создайте метод Car[] listAllowedCars(), который возвращает список допущенных болидов.
+Создайте метод void race(), который запускает машину на трассу. т.е запускает метод drive у car котолые в списке
+Переопределите метод toString
+
+
+Потом запустите:
+public class Main {
+    public static void main(String[] args) {
+        // Создаем пилотов
+        Pilot pilot1 = new Pilot("John Doe", 75, 5);
+        Pilot pilot2 = new Pilot("Jane Smith", 85, 3);
+        Pilot pilot3 = new Pilot("Jack Black", 90, 7);
+
+        // Создаем машины
+        Car car1 = new Car("Formula 1", 600, 70);
+        Car car2 = new Car("Formula 2", 650, 80);
+        Car car3 = new Car("Formula 3", 700, 75);
+
+        // Создаем гоночную трассу
+        RaceTrack raceTrack = new RaceTrack(700, 100);
+
+        // Пытаемся добавить машины с пилотами на трассу
+        raceTrack.addCar(car1, pilot1); // Это должно сработать
+        raceTrack.addCar(car2, pilot2); // Это должно сработать
+        raceTrack.addCar(car3, pilot3); // Это может не сработать из-за веса пилота
+
+        // Выводим список допущенных машин
+        Car[] allowedCars = raceTrack.listAllowedCars();
+        System.out.println("Allowed cars on the track:");
+        for (Car car : allowedCars) {
+            System.out.println(car);
+        }
+
+        // Запускаем гонки
+        raceTrack.race();
+    }
+}
