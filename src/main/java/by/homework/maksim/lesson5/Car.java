@@ -1,6 +1,6 @@
 package by.homework.maksim.lesson5;
 
-public class Car{
+public class Car {
     private String name;
     private double power;
     private double maxPilotWeigh;
@@ -37,6 +37,7 @@ public class Car{
     public String getName() {
         return name;
     }
+
     public double getPower() {
         return power;
     }
