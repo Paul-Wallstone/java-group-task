@@ -10,4 +10,21 @@ public class Main {
     Car car1 = new Car("Formula1", 600, 70);
     Car car2 = new Car("Formula2", 650, 80);
     Car car3 = new Car("Formula3", 700, 75);
+
+    RaceTrack raceTrack = new RaceTrack(700, 100);
+
+    // Пытаемся добавить машины с пилотами на трассу
+        raceTrack.addCar(car1, pilot1); // Это должно сработать
+        raceTrack.addCar(car2, pilot2); // Это должно сработать
+        raceTrack.addCar(car3, pilot3); // Это может не сработать из-за веса пилота
+
+    // Выводим список допущенных машин
+    Car[] allowedCars = raceTrack.listAllowedCars();
+        System.out.println("Allowed cars on the track:");
+        for (Car car : allowedCars) {
+        System.out.println(car);
+    }
+
+    // Запускаем гонки
+        raceTrack.race();
 }

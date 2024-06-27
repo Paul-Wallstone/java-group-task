@@ -4,13 +4,12 @@ public class Car {
     private String name;
     private double power;
     private double maxPilotWeigh;
-    Pilot pilot;
+    private Pilot pilot;
 
-    public Car(String name, double power, double maxPilotWeigh, Pilot pilot) {
+    public Car(String name, double power, double maxPilotWeigh) {
         this.name = name;
         this.power = power;
         this.maxPilotWeigh = maxPilotWeigh;
-        this.pilot = pilot;
     }
 
     boolean isPilotSuitable(Pilot pilot) {
@@ -44,6 +43,14 @@ public class Car {
 
     public double getMaxPilotWeigh() {
         return maxPilotWeigh;
+    }
+
+    public Pilot getPilot() {
+        return pilot;
+    }
+
+    public void setPilot(Pilot pilot) {
+        this.pilot = pilot;
     }
 
     @Override
