@@ -9,7 +9,7 @@ public class Book {
     private String author;
     private int year;
 
-    public Book() {
+    private Book() {
         this.name = "We don't know name";
         this.author = "We don't know author ";
         this.year = 0;
@@ -36,5 +36,29 @@ public class Book {
 
     public void getInfo() {
         System.out.println("The name of this book is " + name);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
     }
 }
