@@ -12,24 +12,21 @@ public class Car {
         this.maxPilotWeigh = maxPilotWeigh;
     }
 
-    boolean isPilotSuitable(Pilot pilot) {
-        double maxWeight = 80;
-        return pilot.getWeight() <= maxWeight;
+    boolean isPilotSuitable(Pilot pilot, double maxPilotWeigh) {
+
+        return pilot.getWeight() <= maxPilotWeigh;
     }
 
-    public static void drive(Pilot pilot) {
-        double maxiWeight = 80;
+    public static void drive(Pilot pilot, double power, double maxPilotWeigh) {
 
         double pilotWeight = pilot.getWeight();
-        double power = 100;
-        if (maxiWeight - pilotWeight >= 0) {
-
-        } else if (maxiWeight - pilotWeight >= -10) {
-            power = power - (power * 0.2);
-        } else if (maxiWeight - pilotWeight >= -20) {
-            power = power - (power * 0.4);
-        } else if (maxiWeight - pilotWeight >= -30) {
+        if (maxPilotWeigh - pilotWeight >= 0) ;
+        else if (maxPilotWeigh - pilotWeight >= -10) {
+            power = power - (power * 0.8);
+        } else if (maxPilotWeigh - pilotWeight >= -20) {
             power = power - (power * 0.6);
+        } else if (maxPilotWeigh - pilotWeight >= -30) {
+            power = power - (power * 0.4);
         } else power = 0;
     }
 
