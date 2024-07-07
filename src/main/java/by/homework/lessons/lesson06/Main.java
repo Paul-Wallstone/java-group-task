@@ -39,8 +39,8 @@ public class Main {
         mouse.sound();
 
 
-        Animal dog2 = new Dog();
-        Animal cat2 = new Cat();
+        Dog dog2 = new Dog();
+        Cat cat2 = new Cat();
         Dog dog1 = new Dog();
 
 
