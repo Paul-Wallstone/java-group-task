@@ -24,17 +24,21 @@ public class Main {
         client3.displeyInfo();
         person1.displeyInfo();
         ((Client) client).test();
-        Employee employee = new Employee("Grisha", "manager");
-        Employee employee2 = new Employee("Maga", "security");
+        Employee employee = new Employee("Grisha", PositionType.MANAGER);
+        Employee employee2 = new Employee("Maga", PositionType.SECURITY);
         List<Person> persons = new ArrayList<>();
         persons.add((Person) client);
         persons.add(client2);
         persons.add(client3);
-        persons.add(1,employee2);
-        persons.add(4,employee);
+        persons.add(1, employee2);
+        persons.add(4, employee);
         persons.forEach(Person::displeyInfo);
         persons.forEach(person -> person.hello("Max " + new Random().nextInt(100) + 1));
+
+        Employee employee3 = new Employee("Petya", PositionType.DRIVER);
+
+        EmployeeRecord pasha = new EmployeeRecord("Pasha", PositionType.DRIVER);
+
+        System.out.println("I am %s with position %s".formatted(pasha.name(), pasha.type()));
     }
-
-
 }
