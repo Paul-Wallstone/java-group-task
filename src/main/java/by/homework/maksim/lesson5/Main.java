@@ -7,9 +7,9 @@ public class Main {
         Pilot pilot3 = new Pilot("Jack Black", 90, 7);
 
 
-        Car car1 = new Car("Formula1", 600, 70);
-        Car car2 = new Car("Formula2", 650, 80);
-        Car car3 = new Car("Formula3", 700, 75);
+        Car car1 = new Car("Formula1", 600, 70, pilot1);
+        Car car2 = new Car("Formula2", 650, 80, pilot2);
+        Car car3 = new Car("Formula3", 700, 75, pilot3);
 
         RaceTrack raceTrack = new RaceTrack(700, 100);
 
@@ -22,7 +22,9 @@ public class Main {
         Car[] allowedCars = raceTrack.listAllowedCars();
         System.out.println("Allowed cars on the track:");
         for (Car car : allowedCars) {
-            System.out.println(car);
+            if (car != null) {
+                System.out.println(car);
+            }
         }
 
         // Запускаем гонки

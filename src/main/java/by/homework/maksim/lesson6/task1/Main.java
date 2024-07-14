@@ -8,9 +8,6 @@ public class Main {
                 new Manager()
         };
 
-        for (Employee employee : employees) {
-            employee.work();
-            System.out.println();
-        }
+
     }
 }

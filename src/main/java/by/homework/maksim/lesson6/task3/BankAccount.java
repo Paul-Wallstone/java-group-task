@@ -12,17 +12,19 @@ public class BankAccount {
     public void deposit(double amount) {
 
         balance += amount;
-        System.out.println(amount + balance);
+
     }
 
     public void withdraw(double amount) {
 
-        if (amount > balance) {
+        if (amount <= balance) {
+            balance -= amount;
+        }
+        {
 
             return;
         }
-        balance -= amount;
-        System.out.println(amount + balance);
+
     }
 
     public double getBalance() {

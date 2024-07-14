@@ -6,10 +6,11 @@ public class Car {
     private double maxPilotWeigh;
     private Pilot pilot;
 
-    public Car(String name, double power, double maxPilotWeigh) {
+    public Car(String name, double power, double maxPilotWeigh, Pilot pilot) {
         this.name = name;
         this.power = power;
         this.maxPilotWeigh = maxPilotWeigh;
+        this.pilot = pilot;
     }
 
     boolean isPilotSuitable(Pilot pilot, double maxPilotWeigh) {
@@ -17,17 +18,21 @@ public class Car {
         return pilot.getWeight() <= maxPilotWeigh;
     }
 
-    public static void drive(Pilot pilot, double power, double maxPilotWeigh) {
-
+    public void drive() {
+        double calculatedPower = 0;
         double pilotWeight = pilot.getWeight();
         if (maxPilotWeigh - pilotWeight >= 0) ;
         else if (maxPilotWeigh - pilotWeight >= -10) {
-            power = power - (power * 0.8);
+            calculatedPower = power * 0.8;
         } else if (maxPilotWeigh - pilotWeight >= -20) {
-            power = power - (power * 0.6);
+            calculatedPower = power * 0.6;
         } else if (maxPilotWeigh - pilotWeight >= -30) {
-            power = power - (power * 0.4);
-        } else power = 0;
+            calculatedPower = power * 0.4;
+        } else {
+            calculatedPower = 0;
+        }
+        System.out.println("Машина " + name + " c пилотом " + pilot.getName()
+                + " и весом" + pilot.getWeight() + " имеет мощность" + calculatedPower + " Стартует");
     }
 
     public String getName() {
@@ -49,6 +54,7 @@ public class Car {
     public void setPilot(Pilot pilot) {
         this.pilot = pilot;
     }
+
 
     @Override
     public String toString() {
