@@ -16,4 +16,12 @@ public class Client extends Person {
     public void displeyInfo() {
         System.out.println("Мой возраст: " + age + " , зовут: " + name);
     }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
