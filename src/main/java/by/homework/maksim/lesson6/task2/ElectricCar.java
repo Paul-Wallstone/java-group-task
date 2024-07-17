@@ -10,6 +10,7 @@ public class ElectricCar extends Car {
 
     @Override
     public void move() {
+        System.out.println("Помчал " + "батарея: " + batteryLevel);
 
     }
 }
