@@ -14,19 +14,12 @@ public class BankAccount {
             System.out.println("amount не положительная");
         }
         balance += amount;
-
     }
 
     public void withdraw(double amount) {
-
         if (amount <= balance) {
             balance -= amount;
         }
-        {
-
-            return;
-        }
-
     }
 
     public double getBalance() {

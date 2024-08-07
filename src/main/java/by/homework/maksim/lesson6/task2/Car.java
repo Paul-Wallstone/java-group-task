@@ -9,7 +9,6 @@ public class Car extends Vehicle {
 
     @Override
     public void move() {
-        System.out.println("Поехал ");
-
+        System.out.println("Поехала машина");
     }
 }
