@@ -24,9 +24,7 @@ public class Person implements Cloneable {
     }
 
     @Override
-
     public Person clone() throws CloneNotSupportedException {
-        Person clone = (Person) super.clone();
-        return clone;
+        return (Person) super.clone();
     }
 }

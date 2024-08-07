@@ -1,38 +1,47 @@
 package by.homework.maksim.lesson8;
 
 public class GenericArrayList<E> {
-    E[] data;
+    private final E[] data;
     private int size;
+    private int lastFilledIndex = -1;
+
+    public GenericArrayList(int size) {
+        this.data = (E[]) new Object[size];
+        this.size = size;
+    }
 
     public GenericArrayList() {
-        data = (E[]) new Object[10];
-        size = 0;
+       this(10);
     }
 
     public boolean add(E e) {
-        if (size == data.length) {
-            E[] newData = (E[]) new Object[data.length * 2];
-            System.arraycopy(data, 0, newData, 0, size);
-            data = newData;
+        if (lastFilledIndex < size) {
+            data[++lastFilledIndex] = e;
+            return true;
         }
-        data[size++] = e;
-        return true;
+        return false;
     }
 
     public boolean remove(E e) {
         for (int i = 0; i < size; i++) {
             if (data[i].equals(e)) {
-                System.arraycopy(data, i + 1, data, i, size - i - 1);
-                size--;
+                data[i] = null;
                 return true;
             }
         }
         return false;
     }
 
+    public E get(int i) {
+        if (i >= 0 && i < size) {
+            return data[i];
+        }
+        return null;
+    }
+
     public boolean contains(E e) {
         for (int i = 0; i < size; i++) {
-            if (data[i].equals(e)) {
+            if (data[i] != null && data[i].equals(e)) {
                 return true;
             }
         }
@@ -40,7 +49,12 @@ public class GenericArrayList<E> {
     }
 
     public boolean isEmpty() {
-        return size == 0;
+        for (int i = 0; i < size; i++) {
+            if (data[i] != null) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public int size() {

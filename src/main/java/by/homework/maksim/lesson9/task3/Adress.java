@@ -27,10 +27,6 @@ public class Adress implements Prototype<Adress> {
 
     @Override
     public Adress clone() {
-        try {
-            return (Adress) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException(e);
-        }
+        return new Adress(street, city);
     }
 }

@@ -6,9 +6,7 @@ public class Employee implements Cloneable {
 
     public Employee(String name, Adress adress) {
         this.name = name;
-    }
-
-    public Employee(String String) {
+        this.adress = adress;
     }
 
     public String getName() {
@@ -19,10 +17,14 @@ public class Employee implements Cloneable {
         return adress;
     }
 
+    public void setAdress(Adress adress) {
+        this.adress = adress;
+    }
+
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    protected Employee clone() throws CloneNotSupportedException {
         Employee clone = (Employee) super.clone();
-        clone.adress = (Adress) adress.clone();
+        clone.setAdress(adress.clone());
         return clone;
     }
 }

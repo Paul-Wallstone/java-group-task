@@ -27,12 +27,6 @@ public class Employee implements Prototype<Employee> {
 
     @Override
     public Employee clone() {
-        try {
-            Employee clone = (Employee) super.clone();
-            clone.adress = adress.clone();
-            return clone;
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException(e);
-        }
+        return new Employee(name, adress.clone());
     }
 }

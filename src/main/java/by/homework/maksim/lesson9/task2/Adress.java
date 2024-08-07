@@ -26,7 +26,7 @@ public class Adress implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    protected Adress clone() throws CloneNotSupportedException {
+        return (Adress) super.clone();
     }
 }
