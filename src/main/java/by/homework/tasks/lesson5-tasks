@@ -36,13 +36,13 @@ pilot (тип Pilot)
 Требования:
 
 Создайте класс RaceTrack с полями:
-maxCarPower (тип double)
-minCarPower (тип double)
-allowedCars (тип Car[])
-Реализуйте конструктор для инициализации поля maxCarPower и minCarPower.
-minCarPower олжно быть больше 0
-maxCarPower меньше 1000
-Создайте метод boolean canCarRace(Car car), который проверяет, может ли машина проехать по трассе.
++maxCarPower (тип double)
++minCarPower (тип double)
++allowedCars (тип Car[])
++Реализуйте конструктор для инициализации поля maxCarPower и minCarPower.
++minCarPower олжно быть больше 0
++maxCarPower меньше 1000
++Создайте метод boolean canCarRace(Car car), который проверяет, может ли машина проехать по трассе.
 Создайте метод boolean addCar(Car car), который добавляет машину с пилотом в список, если они соответствуют требованиям (мощность машины).
 Создайте метод boolean removeCar(Car car), который убирает машину из списка.
 Создайте метод Car[] listAllowedCars(), который возвращает список допущенных болидов.
