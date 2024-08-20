@@ -12,14 +12,9 @@ public class SubListExample {
 
         int subListSize = 5;
 
-        List<List<Integer>> subLists = new ArrayList<>();
-        for (int i = 0; i < originalList.size(); i += subListSize) {
-            int toIndex = Math.min(i + subListSize, originalList.size());
-            subLists.add(originalList.subList(i, toIndex));
-        }
-
-        for (List<Integer> subList : subLists) {
-            System.out.println(subList);
+        for (int from = 0; from < originalList.size(); from += subListSize) {
+            int to = Math.min(from + subListSize, originalList.size());
+            System.out.println(originalList.subList(from, to));
         }
     }
 }
