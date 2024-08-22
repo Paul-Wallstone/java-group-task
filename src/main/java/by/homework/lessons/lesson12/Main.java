@@ -59,7 +59,5 @@ public class Main {
         String poll = queue.poll();
         System.out.println(peek);
         System.out.println(poll);
-
-
     }
 }
