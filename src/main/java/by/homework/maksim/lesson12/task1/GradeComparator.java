@@ -2,9 +2,10 @@ package by.homework.maksim.lesson12.task1;
 
 import java.util.Comparator;
 
-public class NameComparator implements Comparator<Student> {
+public class GradeComparator implements Comparator<Student> {
+
     @Override
     public int compare(Student s1, Student s2) {
-        return s1.getName().compareTo(s2.getName());
+        return Double.compare(s2.getGrade(), s1.getGrade());
     }
 }

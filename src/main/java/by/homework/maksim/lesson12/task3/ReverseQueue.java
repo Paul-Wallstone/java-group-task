@@ -16,6 +16,10 @@ public class ReverseQueue {
         queue.add(4);
 
 
+        //deque.addAll(queue);
+
+
+        System.out.println("__________________________");
         while (!queue.isEmpty()) {
             deque.addFirst(queue.poll());
         }
