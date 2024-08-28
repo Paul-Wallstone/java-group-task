@@ -27,6 +27,7 @@ public class Main {
 
         Set<Man> set = new TreeSet<>(List.of(new Man(100), new Man(66), new Man(123)));
         List<Man> manList = new ArrayList<>(List.of(new Man(100), new Man(66), new Man(123)));
+        set.addAll(manList);
         ManComparator manComparator = new ManComparator();
         manList.sort(manComparator);
 

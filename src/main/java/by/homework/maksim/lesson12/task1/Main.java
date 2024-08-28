@@ -15,18 +15,18 @@ public class Main {
         students.add(new Student("Paul", 44, 7.9));
 
         LinkedList<Student> studentsByName = new LinkedList<>(students);
-        Collections.sort(studentsByName, Comparator.comparing(Student::getName));
+        studentsByName.sort(new NameComparator());
         System.out.println("Отсортированные по имени студенты:");
         studentsByName.forEach(System.out::println);
 
 
         LinkedList<Student> studentsByAge = new LinkedList<>(students);
-        Collections.sort(studentsByAge, Comparator.comparingInt(Student::getAge));
+        studentsByAge.sort(new AgeComparator());
         System.out.println("Отсортированные по возрасту студенты:");
         studentsByAge.forEach(System.out::println);
 
         LinkedList<Student> studentsByGrade = new LinkedList<>(students);
-        Collections.sort(studentsByGrade, Comparator.comparingDouble(Student::getGrade).reversed());
+        studentsByGrade.sort(new GradeComparator());
         System.out.println("Отсортированные по оценке студенты:");
         studentsByGrade.forEach(System.out::println);
 
