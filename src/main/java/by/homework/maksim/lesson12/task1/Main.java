@@ -1,9 +1,5 @@
 package by.homework.maksim.lesson12.task1;
 
-import by.homework.lessons.lesson12.ManComparator;
-
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.LinkedList;
 
 public class Main {
@@ -29,6 +25,5 @@ public class Main {
         studentsByGrade.sort(new GradeComparator());
         System.out.println("Отсортированные по оценке студенты:");
         studentsByGrade.forEach(System.out::println);
-
     }
 }
