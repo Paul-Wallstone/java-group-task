@@ -37,4 +37,12 @@ public class Student {
     public int hashCode() {
         return Integer.hashCode(id);
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }

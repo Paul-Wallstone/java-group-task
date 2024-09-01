@@ -4,7 +4,7 @@ public class Strinnng {
     public static void main(String[] args) {
         String originalString = "Hello, world!";
         int startIndex = 7;
-        int endIndex = 11;
+        int endIndex = 12;
 
         String substring = originalString.substring(startIndex, endIndex);
 
