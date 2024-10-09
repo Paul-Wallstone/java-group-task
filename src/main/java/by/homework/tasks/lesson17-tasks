@@ -20,3 +20,7 @@ List<String> converted = convert(numbers, n -> "Number: " + n);
 
 Пример:
 String result = transform("hello world", s -> s.trim(), s -> s.toUpperCase(), s -> s.replace(" ", "-"));
+
+public String transform(String str,Transformer<String>transformer){
+return transformer.transform(str);
+}
