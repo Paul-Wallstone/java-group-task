@@ -1,4 +1,4 @@
-package by.homework.maksim;
+package by.homework.maksim.lesson2;
 
 /**
  * @author ppuchinsky
