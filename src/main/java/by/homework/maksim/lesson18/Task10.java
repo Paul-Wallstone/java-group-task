@@ -13,5 +13,10 @@ public class Task10 {
                 .collect(Collectors.groupingBy(Person::getAge));
 
         System.out.println(peopleAge);
+
+        Map<String, List<Person>> peopleNameMap = people.stream()
+                .collect(Collectors.groupingBy(Person::getName));
+
+        System.out.println(peopleNameMap);
     }
 }
