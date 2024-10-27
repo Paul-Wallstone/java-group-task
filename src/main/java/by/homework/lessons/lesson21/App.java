@@ -24,7 +24,7 @@ public class App {
                 exit = true;
             }
             System.out.println("%s - %s: "
-                    .formatted(name, LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-YYYY hh:mm")))
+                    .formatted(name, LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm")))
                     + next);
         }
 
